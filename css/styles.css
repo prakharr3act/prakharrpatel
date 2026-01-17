@@ -103,8 +103,8 @@ align-items:center
 .menu a{
 text-decoration:none;
 color:var(--text);
-font-size:1.05rem;
-opacity:.8
+font-size:1.2rem;
+opacity: 0.8;
 }
 
 .menu a:hover{opacity:1}
@@ -151,13 +151,14 @@ section{padding:160px 7vw}
 min-height:100vh;
 display:flex;
 flex-direction:column;
-justify-content:center
+border-bottom:1px solid var(--border);
+justify-content:center;
 }
 
 .hero h1{
 font-size:clamp(4rem,10vw,9rem);
 font-weight:900;
-line-height:1
+line-height:1;
 }
 
 .gradient{
@@ -283,6 +284,7 @@ section{padding:120px 6vw}
 .stat h2{font-size:3.6rem}
 }
 
+
 .overlay{
   position:fixed;
   inset:0;
@@ -374,5 +376,12 @@ section{padding:120px 6vw}
   color:#ffffff;
   text-decoration:none;
   transition:0.3s ease;
+}
 
+.menu .active {
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 4px;
+  opacity: 1;
+  box-shadow: 0 1px 4px -1px var(--blue); 
+  font-weight: 600;
 }
