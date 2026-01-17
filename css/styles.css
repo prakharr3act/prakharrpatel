@@ -283,7 +283,6 @@ section{padding:120px 6vw}
 .stat h2{font-size:3.6rem}
 }
 
-/* overlay */
 .overlay{
   position:fixed;
   inset:0;
@@ -375,4 +374,5 @@ section{padding:120px 6vw}
   color:#ffffff;
   text-decoration:none;
   transition:0.3s ease;
+
 }
