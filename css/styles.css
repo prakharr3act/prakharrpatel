@@ -187,9 +187,7 @@ color:var(--text);
 transition:.3s
 }
 
-.socials a:hover{
-color:var(--blue);
-}
+
 
 .statement{
 font-size:clamp(2.4rem,6vw,5rem);
@@ -385,6 +383,7 @@ section{padding:120px 6vw}
   box-shadow: 0 1px 4px -1px var(--blue); 
   font-weight: 600;
 }
+
 
 
 
