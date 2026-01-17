@@ -378,10 +378,3 @@ section{padding:120px 6vw}
   transition:0.3s ease;
 }
 
-.menu .active {
-  border-bottom: 2px solid var(--blue);
-  padding-bottom: 4px;
-  opacity: 1;
-  box-shadow: 0 1px 4px -1px var(--blue); 
-  font-weight: 600;
-}
