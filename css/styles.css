@@ -195,6 +195,10 @@ font-weight:800;
 line-height:1.15
 }
 
+.socials a:hover{
+color:var(--blue);
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -383,6 +387,7 @@ section{padding:120px 6vw}
   box-shadow: 0 1px 4px -1px var(--blue); 
   font-weight: 600;
 }
+
 
 
 
