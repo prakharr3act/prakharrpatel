@@ -1,4 +1,4 @@
-# Prakhar Patel — r3act
+# Prakhar Patel | r3act
 
 This repository hosts my **personal website** — a living space where I document my growth, experiments, and systems as I learn and build.
 
@@ -9,7 +9,7 @@ It exists to reflect my journey, mindset, and curiosity as a developer.
 
 ##  About Me
 
-Hi, I’m **Prakhar Patel** (aka **r3act**).  
+Hi, I’m **Prakhar Patel** (aka **r3a**).  
 I’m a **15-year-old student** who loves building things on the internet.
 
 I enjoy:
