@@ -1,5 +1,5 @@
 .contact-section {
-    padding: 60px 7vw 200px 7vw;
+    padding: 50px 7vw 200px 7vw;
     background: var(--bg);
     display: flex;
     justify-content: center;
@@ -116,4 +116,5 @@
     }
 
 }
+
 
