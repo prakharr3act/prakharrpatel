@@ -63,7 +63,11 @@ z-index:100
   color: #ffffff;
 }
 .logo-wrap{position:relative}
-.logo{font-size:1.7rem;font-weight:900}
+.logo{
+  font-size:1.7rem;
+      font-weight:900;
+     user-select:none;
+     }
 
 .tooltip{
 position:absolute;
@@ -386,6 +390,7 @@ section{padding:120px 6vw}
   opacity: 1;
   font-weight: 600;
 }
+
 
 
 
