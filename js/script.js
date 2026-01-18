@@ -29,7 +29,7 @@ const closePopup = document.getElementById("closePopup");
 
 setTimeout(()=>{
   overlay.classList.add("active");
-},40000);
+},20000);
 
 closePopup.addEventListener("click",()=>{
   overlay.classList.remove("active");
@@ -40,6 +40,7 @@ closePopup.addEventListener("click",()=>{
 document.querySelector(".logo-wrap").addEventListener("click", function () {
   this.classList.toggle("active");
 });
+
 
 
 
