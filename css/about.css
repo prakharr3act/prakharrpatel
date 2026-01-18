@@ -137,7 +137,7 @@ section .about-section {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  width: 95%;
+  width: 90%;
   max-width: 900px;
   min-height: 500px; 
   padding: 30px 20px;
@@ -206,5 +206,6 @@ section .about-section {
   text-decoration: none;
   color: inherit;
 }
+
 
 
