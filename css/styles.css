@@ -62,8 +62,8 @@ z-index:100
 .popup h2{
   color: #ffffff;
 }
-.logo-wrap{position:relative}
-.logo{font-size:1.7rem;font-weight:900;user-select: none;}
+.logo-wrap{position:relative;user-select: none;}
+.logo{font-size:1.7rem;font-weight:900;user-select:none;cursor:pointer;user-select: none;}
 
 .tooltip{
 position:absolute;
@@ -78,11 +78,18 @@ box-shadow:0 30px 80px rgba(0,0,0,.15);
 opacity:0;
 pointer-events:none;
 transform:translateY(10px);
-transition:.35s ease
+transition:.35s ease;
+user-select: none;
+}
+
+.logo-wrap.active .tooltip{
+opacity:1;
+pointer-events:auto;
+transform:translateY(0)
 }
 
 @media(hover:hover){
-.logo-wrap:hover  .tooltip{
+.logo-wrap:hover .tooltip{
 opacity:1;
 pointer-events:auto;
 transform:translateY(0)
@@ -413,4 +420,5 @@ footer a{
   margin: 100px auto;
   text-align: center;
 }
+
 
