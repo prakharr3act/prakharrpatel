@@ -405,3 +405,12 @@ footer a{
   user-select: none;
   width: fit-content;
 }
+
+.warn{
+  font-size: 20px;
+}
+.warn-container{
+  margin: 100px auto;
+  text-align: center;
+}
+
