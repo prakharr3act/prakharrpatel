@@ -35,3 +35,8 @@ closePopup.addEventListener("click",()=>{
   overlay.classList.remove("active");
 
 });
+
+document.querySelector(".logo-wrap").addEventListener("click", function () {
+  this.classList.toggle("active");
+});
+
