@@ -1,0 +1,126 @@
+:root {
+  --bg-container: #0b0b0b;
+  --border-color: #1e1e1e;
+  --text-role: #ffffff;
+  --text-description: #d1d5db;
+  --text-muted: #9ca3af;
+  --lang-bg: #141414;
+  --lang-text: #ffffff;
+  --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-container: #ffffff;
+    --border-color: #e5e7eb;
+    --text-role: #000000;
+    --text-description: #111827;
+    --text-muted: #374151;
+    --lang-bg: #f3f4f6;
+    --lang-text: #000000;
+  }
+}
+
+section .about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 850px;
+  margin: 24px auto;
+  background-color: var(--bg-container);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  font-family: var(--font-main);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.container:hover {
+  transform: translateY(-8px);
+}
+
+.time {
+  width: 30%;
+  padding: 24px;
+  border-right: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.time p {
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 24px;
+}
+
+.role {
+  color: var(--text-role);
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.description {
+  color: var(--text-description);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.languages-learnt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.lang {
+  padding: 6px 14px;
+  background-color: var(--lang-bg);
+  color: var(--lang-text);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .time {
+    width: 100%;
+    padding: 16px 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .info {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .role {
+    font-size: 1.35rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
