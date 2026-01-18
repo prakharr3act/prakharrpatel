@@ -29,8 +29,9 @@ const closePopup = document.getElementById("closePopup");
 
 setTimeout(()=>{
   overlay.classList.add("active");
-},1000);
+},4000);
 
 closePopup.addEventListener("click",()=>{
   overlay.classList.remove("active");
+
 });
