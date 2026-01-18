@@ -460,7 +460,7 @@ footer a{
 
 .about-name {
   font-family: 'Inter', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--text-white);
   margin: 0 0 15px 0;
@@ -469,7 +469,7 @@ footer a{
 
 .about-desc {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: var(--text-gray);
   margin-bottom: 40px;
@@ -707,3 +707,4 @@ footer a{
 .about-section{
   border-bottom: 1px solid var(--border);
 }
+
