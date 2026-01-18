@@ -27,16 +27,9 @@ setInterval(()=>{document.getElementById("time").innerText=new Date().toLocaleSt
 const overlay = document.getElementById("overlay");
 const closePopup = document.getElementById("closePopup");
 
-setTimeout(()=>{
-  overlay.classList.add("active");
-},4000);
-
-closePopup.addEventListener("click",()=>{
-  overlay.classList.remove("active");
-
-});
 
 document.querySelector(".logo-wrap").addEventListener("click", function () {
   this.classList.toggle("active");
 });
+
 
