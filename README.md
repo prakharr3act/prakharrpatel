@@ -32,7 +32,7 @@ Some parts of the site are still **under construction**, and that’s intentiona
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 Built using:
 - **HTML**
