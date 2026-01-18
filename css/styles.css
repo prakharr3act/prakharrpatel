@@ -394,4 +394,14 @@ section{padding:120px 6vw}
 footer a{
   user-select: none;
   width: fit-content;
+
+}
+
+.mobile-menu a{
+  user-select: none;
+}
+
+footer a{
+  user-select: none;
+  width: fit-content;
 }
