@@ -7,7 +7,7 @@ It exists to reflect my journey, mindset, and curiosity as a developer.
 
 ---
 
-## 👋 About Me
+##  About Me
 
 Hi, I’m **Prakhar Patel** (aka **r3act**).  
 I’m a **15-year-old student** who loves building things on the internet.
@@ -18,11 +18,10 @@ I enjoy:
 - Designing systems
 - Learning by building (a lot)
 
-I’ve created **250+ repositories and projects** while exploring different technologies and concepts.
 
 ---
 
-## 🌐 About This Website
+##  About This Website
 
 This website is:
 - A personal space, not a portfolio for jobs  
@@ -53,12 +52,12 @@ Hosted on **GitHub Pages**.
 
 ## 🔗 Live Site
 
-👉 **Website:**  
+ **Website:**  
 https://prakharr3act.github.io/prakharrpatel/
 
 ---
 
-## 📌 Note
+##  Note
 
 This project is about **learning, experimenting, and self-expression**.  
 Nothing here is final — everything is iterative.
