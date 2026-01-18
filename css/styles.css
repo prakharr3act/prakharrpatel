@@ -63,11 +63,7 @@ z-index:100
   color: #ffffff;
 }
 .logo-wrap{position:relative}
-.logo{
-  font-size:1.7rem;
-      font-weight:900;
-     user-select:none;
-     }
+.logo{font-size:1.7rem;font-weight:900;user-select: none;}
 
 .tooltip{
 position:absolute;
@@ -185,22 +181,22 @@ gap:40px;
 flex-wrap:wrap
 }
 
+
+
 .socials a{
 font-size:2.6rem;
 color:var(--text);
 transition:.3s
 }
 
-
+.socials a:hover{
+color:var(--blue);
+}
 
 .statement{
 font-size:clamp(2.4rem,6vw,5rem);
 font-weight:800;
 line-height:1.15
-}
-
-.socials a:hover{
-color:var(--blue);
 }
 
 .grid{
@@ -383,18 +379,19 @@ section{padding:120px 6vw}
   transition:0.3s ease;
 }
 
-
 .menu .active {
   border-bottom: 2px solid var(--blue);
   padding-bottom: 4px;
   opacity: 1;
   font-weight: 600;
 }
+/*new changes that i have to commit*/
 
+.mobile-menu a{
+  user-select: none;
+}
 
-
-
-
-
-
-
+footer a{
+  user-select: none;
+  width: fit-content;
+}
