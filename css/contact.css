@@ -1,0 +1,117 @@
+.contact-section {
+    padding: 160px 7vw;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact-form {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group input, 
+.input-group textarea {
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.contact-form .project-btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+
+.connect-sidebar {
+    padding-left: 20px;
+}
+
+.dev-socials {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-box {
+    width: 80px;
+    height: 80px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-box i, .social-box svg {
+    font-size: 1.5rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .connect-sidebar {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dev-socials {
+        justify-content: center;
+    }
+}
