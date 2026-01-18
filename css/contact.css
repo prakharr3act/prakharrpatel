@@ -1,5 +1,5 @@
 .contact-section {
-    padding: 160px 7vw;
+    padding: 100px 7vw 250px 7vw;
     background: var(--bg);
     display: flex;
     justify-content: center;
@@ -114,4 +114,5 @@
     .dev-socials {
         justify-content: center;
     }
+
 }
