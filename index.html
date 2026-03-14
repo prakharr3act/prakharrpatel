@@ -17,15 +17,7 @@
 
 <nav>
 <div class="logo-wrap">
-<div class="logo">r3act | Prakhar Patel</div>
-<div class="tooltip">
-<h4>r3act.technologies</h4>
-<span>Automation & Technology Systems </span>
-<p>
-Independent automation and technology initiative building scalable systems,
-developer tools, and experimental software across 10+ programming languages.
-</p>
-</div>
+<div class="logo">  Prakhar Patel</div>
 </div>
 
 <div class="menu">
@@ -44,19 +36,19 @@ developer tools, and experimental software across 10+ programming languages.
 <a href="about.html">About</a>
 <a href="projects.html">Projects</a>
 <a href="contact.html">Contact</a>
+<a href="index.html">Gallery</a>
 </div>
 
 <section class="hero">
-<h1>Building<br><span class="gradient">Massive</span><br>Digital Systems.</h1>
+<h1>Learning <br><span class="gradient">Building</span><br>Digital Projects.</h1>
 <p>
-I'm <strong>Prakhar Patel</strong> — 15-year-old student, full-stack developer,
+I'm <strong>Prakhar Patel</strong> — 15-year-old student, developer,
 and obsessive builder. Maintained over a large collection of repositories built through raw experimentation.
 </p>
 
 <div class="socials">
 <a href="https://github.com/prakharr3act" target="_blank"><i class="fab fa-github"></i></a>
 <a href="https://www.instagram.com/prakharr._patel/" target="_blank"><i class="fab fa-instagram"></i></a>
-<a class="vercel" href="https://zippr.vercel.app/" target="_blank"><svg viewBox="0 0 16 16"><path d="M8 1L16 15H0L8 1Z"/></svg></a>
 <a href="https://developers.google.com/profile/u/100280821917864026348" target="_blank" class="social">
   <i class="fab fa-google"></i>
 </a>
@@ -68,59 +60,6 @@ and obsessive builder. Maintained over a large collection of repositories built 
 </section>
 
 <main>
-<section class="about-section"> 
-  <h2 class="projects-title">About Me</h2>
-<div class="about-card">
-  <img src="assets/prakhar_pfp.jpg" alt="Prakhar Patel">
-  
-  <div class="about-content">
-    <div class="about-text">
-      <h3 class="about-name">Prakhar Patel</h3>
-      <p class="about-desc">
-       A student, full-stack developer, and obsessive builder. I specialize in building massive digital systems through raw experimentation and clean code.
-      </p>
-    </div>
-   <a href="about.html"><button class="about-btn" >Learn More</button></a>
-  </div>
-</div>
-</section>
-
-
-<section class="projects-section">
-  <h2 class="projects-title">My Projects</h2>
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <img src="assets/zippr.png" alt="Automation Tools">
-      <h3>Zippr</h3>
-      <p>Zippr is a client-side tool that automatically generates and randomizes secure passwords for easy management.</p>
-      <a href="https://zippr.vercel.app/" class="project-btn">Explore</a>
-    </div>
-
-    <div class="project-card">
-      <img src="assets/n3ws.png" alt="Web Development">
-      <h3>N3WS</h3>
-      <p>N3WS fetches real-time information from multiple APIs, delivering fast, reliable, and curated news updates instantly.</p>
-      <a href="https://prakharr3act.github.io/n3ws/" class="project-btn">Explore</a>
-    </div>
-
-    <div class="project-card">
-      <img src="assets/blackjack.png" alt="Experimental Software">
-      <h3>Blackjack</h3>
-      <p>Blackjack is a fast, interactive card game that simulates real casino gameplay with smart logic.</p>
-      <a href="https://prakharr3act.github.io/Blackjack/" class="project-btn">Explore</a>
-    </div>
-
-    <div class="project-card more-projects">
-      <img src="assets/CRM.png" alt="More Projects">
-      <h3>More Projects</h3>
-      <p>Click to explore additional repositories and ongoing experiments.</p>
-      <a href="projects.html" class="project-btn">View More</a>
-    </div>
-
-  </div>
-</section>
-
 
 </main>
 
@@ -139,29 +78,62 @@ and obsessive builder. Maintained over a large collection of repositories built 
 <div class="footer-menu">
 <a  href="https://github.com/prakharr3act" target="_blank">GitHub</a>
 <a href="https://www.instagram.com/prakharr._patel/" target="_blank">Instagram</a>
-<a href="https://zippr.vercel.app/" target="_blank">Vercel</a>
 <a href="https://developers.google.com/profile/u/100280821917864026348" target="_blank" >Google Dev</a>
 </div>
 </div>
 
 <div class="footer-bottom">
-<span>Made by <strong class="footer-meta">r3act</strong></span>
+<!--<span>copyright &copy; <strong class="footer-meta">Prakhar Patel</strong></span>-->
 <span id="time"></span>
 </div>
 </footer>
 
-<div class="overlay" id="overlay">
-  <div class="popup">
-    <h2> Site Under Development</h2>
-    <p>
-      This website is currently under development.<br>
-      Some features and sections may take time to be fully completed.
-      For the updates, visit <a href="https://github.com/prakharr3act">r3act n3ws</a>
-    </p>
-    <button id="closePopup">Continue</button>
+
+<div id="loader" style="position:fixed; inset:0; background:#ffffff; display:flex; align-items:center; justify-content:center; z-index:10000; transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 1.2s;">
+  <div style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+    <div style="position:relative; overflow:hidden;">
+      <h1 style="font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:clamp(2.5rem, 8vw, 4rem); font-weight:900; color:#000000; letter-spacing:0.4em; margin:0; padding-left:0.4em; opacity:0; transform:translateY(60px); filter:blur(15px); animation: smoothReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
+        R3ACT
+      </h1>
+    </div>
+    <div style="width:0; height:1px; background:#000000; margin-top:15px; animation: sharpLine 2.2s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;"></div>
   </div>
 </div>
 
+<style>
+@keyframes smoothReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+    filter: blur(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes sharpLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    width: 200px;
+    opacity: 0.1;
+  }
+}
+
+#loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+</style>
 
 <script src="js/script.js">
 </script>

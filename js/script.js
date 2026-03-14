@@ -27,21 +27,20 @@ setInterval(()=>{document.getElementById("time").innerText=new Date().toLocaleSt
 const overlay = document.getElementById("overlay");
 const closePopup = document.getElementById("closePopup");
 
-setTimeout(()=>{
-  overlay.classList.add("active");
-},200000);
-
-closePopup.addEventListener("click",()=>{
-  overlay.classList.remove("active");
-
-});
-
 
 document.querySelector(".logo-wrap").addEventListener("click", function () {
   this.classList.toggle("active");
 });
 
 
-
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  document.body.style.overflow = "hidden";
+  
+  setTimeout(() => {
+    loader.classList.add("fade-out");
+    document.body.style.overflow = "auto";
+  }, 2500);
+});
 
 
