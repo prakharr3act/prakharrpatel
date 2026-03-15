@@ -77,3 +77,8 @@ if (overlay) {
     }
   });
 }
+
+
+function linkDisabled(){
+    alert('Link is disabled!');
+}

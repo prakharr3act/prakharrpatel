@@ -9,7 +9,7 @@ It exists to reflect my journey, mindset, and curiosity as a developer.
 
 ##  About Me
 
-Hi, I’m **Prakhar Patel** (aka **r3a**).  
+Hi, I’m **Prakhar Patel** .  
 I’m a **15-year-old student** who loves building things on the internet.
 
 I enjoy:

@@ -77,3 +77,10 @@ if (overlay) {
     }
   });
 }
+
+const Input = document.querySelector('input')
+const Textarea = document.querySelector('textarea')
+function clearInput(){
+  Input.value="";
+  Textarea.value="";
+}
