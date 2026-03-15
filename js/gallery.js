@@ -79,7 +79,6 @@ if (overlay) {
 }
 
 
-
 const galleryItems = document.querySelectorAll('.gallery-item img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.querySelector('.lightbox-img');
@@ -87,8 +86,10 @@ const closeBtn = document.querySelector('#lightbox .close');
 const dotsContainer = document.querySelector('#lightbox .dots');
 
 let currentIndex = 0;
+let startX = 0;
+let endX = 0;
 
-// Create dots dynamically
+
 galleryItems.forEach((img, index) => {
   const dot = document.createElement('span');
   dot.dataset.index = index;
@@ -100,6 +101,7 @@ galleryItems.forEach((img, index) => {
   });
 });
 
+
 galleryItems.forEach((img, index) => {
   img.addEventListener('click', () => {
     currentIndex = index;
@@ -108,6 +110,7 @@ galleryItems.forEach((img, index) => {
   });
 });
 
+
 function updateLightbox() {
   lightboxImg.src = galleryItems[currentIndex].src;
   const dots = dotsContainer.querySelectorAll('span');
@@ -115,8 +118,42 @@ function updateLightbox() {
   dots[currentIndex].classList.add('active');
 }
 
-closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
 
+closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
 lightbox.addEventListener('click', (e) => {
   if(e.target === lightbox) lightbox.classList.remove('active');
+});
+
+
+lightboxImg.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+lightboxImg.addEventListener('touchmove', (e) => {
+  endX = e.touches[0].clientX;
+});
+
+lightboxImg.addEventListener('touchend', () => {
+  let diff = startX - endX;
+  if(Math.abs(diff) > 50) {
+    if(diff > 0) nextImage();  
+    else prevImage();
+  }
+});
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  updateLightbox();
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  updateLightbox();
+}
+
+
+document.addEventListener('keydown', (e) => {
+  if(!lightbox.classList.contains('active')) return;
+  if(e.key === 'ArrowRight') nextImage();
+  if(e.key === 'ArrowLeft') prevImage();
 });
