@@ -84,20 +84,39 @@ const galleryItems = document.querySelectorAll('.gallery-item img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.querySelector('.lightbox-img');
 const closeBtn = document.querySelector('#lightbox .close');
+const dotsContainer = document.querySelector('#lightbox .dots');
 
-galleryItems.forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightbox.classList.add('active');
+let currentIndex = 0;
+
+// Create dots dynamically
+galleryItems.forEach((img, index) => {
+  const dot = document.createElement('span');
+  dot.dataset.index = index;
+  dotsContainer.appendChild(dot);
+
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateLightbox();
   });
 });
 
-closeBtn.addEventListener('click', () => {
-  lightbox.classList.remove('active');
+galleryItems.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentIndex = index;
+    lightbox.classList.add('active');
+    updateLightbox();
+  });
 });
 
+function updateLightbox() {
+  lightboxImg.src = galleryItems[currentIndex].src;
+  const dots = dotsContainer.querySelectorAll('span');
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentIndex].classList.add('active');
+}
+
+closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+
 lightbox.addEventListener('click', (e) => {
-  if(e.target === lightbox) {
-    lightbox.classList.remove('active');
-  }
+  if(e.target === lightbox) lightbox.classList.remove('active');
 });
