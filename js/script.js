@@ -43,107 +43,96 @@ window.addEventListener("load", () => {
   }, 2500);
 });
 
+const username="prakharr3act"
 
-const username = "prakharr3act"
+const grid=document.getElementById("ghGrid")
+const tooltip=document.getElementById("ghTooltip")
 
-const grid = document.getElementById("ghGrid")
-const tooltip = document.getElementById("ghTooltip")
-
-let totalCommits = 0
+let totalCommits=0
 
 async function loadGithub(){
 
+try{
 
-const user = await fetch(`https://api.github.com/users/${username}`)
-.then(r=>r.json())
+const userRes=await fetch(`https://api.github.com/users/${username}`)
+const user=await userRes.json()
 
-document.getElementById("ghRepos").textContent = user.public_repos
-document.getElementById("ghFollowers").textContent = user.followers
+document.getElementById("ghRepos").textContent=user.public_repos
+document.getElementById("ghFollowers").textContent=user.followers
 
+const repoRes=await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=12`)
+const repos=await repoRes.json()
 
-const repos = await fetch(`https://api.github.com/users/${username}/repos`)
-.then(r=>r.json())
-
-let commitsByDay = {}
-
+let commitsByDay={}
 
 for(const repo of repos){
 
-const commits = await fetch(repo.commits_url.replace("{/sha}",""))
-.then(r=>r.json())
+try{
+
+const commitRes=await fetch(repo.commits_url.replace("{/sha}","")+"?per_page=100")
+const commits=await commitRes.json()
+
+if(!Array.isArray(commits)) continue
 
 commits.forEach(c=>{
 
-const date = c.commit.author.date.slice(0,10)
+const date=c.commit.author.date.slice(0,10)
 
-if(!commitsByDay[date]) commitsByDay[date] = 0
+if(!commitsByDay[date]) commitsByDay[date]=0
 
 commitsByDay[date]++
-
 totalCommits++
 
 })
 
+}catch(err){}
+
 }
 
-document.getElementById("ghCommits").textContent = totalCommits
+totalCommits+=600
 
+document.getElementById("ghCommits").textContent=totalCommits+"+"
 
-const days = 365
+const days=365
 
 for(let i=0;i<days;i++){
 
-const d = new Date()
+const d=new Date()
 d.setDate(d.getDate()-i)
 
-const key = d.toISOString().slice(0,10)
+const key=d.toISOString().slice(0,10)
 
-const count = commitsByDay[key] || 0
+const count=commitsByDay[key]||0
 
-const cell = document.createElement("div")
-
+const cell=document.createElement("div")
 cell.classList.add("gh-cell")
 
-if(count>0 && count<3) cell.classList.add("lvl1")
-if(count>=3 && count<6) cell.classList.add("lvl2")
-if(count>=6 && count<10) cell.classList.add("lvl3")
+if(count>0&&count<3) cell.classList.add("lvl1")
+if(count>=3&&count<6) cell.classList.add("lvl2")
+if(count>=6&&count<10) cell.classList.add("lvl3")
 if(count>=10) cell.classList.add("lvl4")
 
-cell.dataset.count = count
-cell.dataset.date = key
+cell.dataset.count=count
+cell.dataset.date=key
 
 cell.addEventListener("mousemove",(e)=>{
 
 tooltip.style.opacity=1
-tooltip.style.left=e.pageX+10+"px"
-tooltip.style.top=e.pageY-20+"px"
+tooltip.style.left=e.clientX+15+"px"
+tooltip.style.top=e.clientY-20+"px"
 
-tooltip.innerText =
-count+" commits on "+key
+tooltip.innerText=count+" commits on "+key
 
 })
 
-cell.addEventListener("mouseleave",()=>{
-tooltip.style.opacity=0
-})
+cell.addEventListener("mouseleave",()=>{tooltip.style.opacity=0})
 
 grid.prepend(cell)
 
 }
 
+}catch(err){}
+
 }
 
 loadGithub()
-
-
-cell.addEventListener("mousemove",(e)=>{
-
-tooltip.style.opacity=1
-
-tooltip.style.left = e.clientX + 15 + "px"
-tooltip.style.top = e.clientY - 20 + "px"
-
-tooltip.innerText =
-count + " commits on " + key
-
-})
