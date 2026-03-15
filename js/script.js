@@ -53,20 +53,20 @@ let totalCommits = 0
 
 async function loadGithub(){
 
-// user stats
+
 const user = await fetch(`https://api.github.com/users/${username}`)
 .then(r=>r.json())
 
 document.getElementById("ghRepos").textContent = user.public_repos
 document.getElementById("ghFollowers").textContent = user.followers
 
-// repos
+
 const repos = await fetch(`https://api.github.com/users/${username}/repos`)
 .then(r=>r.json())
 
 let commitsByDay = {}
 
-// get commits
+
 for(const repo of repos){
 
 const commits = await fetch(repo.commits_url.replace("{/sha}",""))
@@ -88,7 +88,7 @@ totalCommits++
 
 document.getElementById("ghCommits").textContent = totalCommits
 
-// create graph
+
 const days = 365
 
 for(let i=0;i<days;i++){
