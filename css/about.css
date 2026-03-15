@@ -199,3 +199,6 @@ section{padding:120px 6vw}
 }
 
 
+.active{
+    border-bottom: 2px solid var(--blue);
+}

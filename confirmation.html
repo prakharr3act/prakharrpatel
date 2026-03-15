@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirmation</title>
+</head>
+<body style="margin:0;font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;background:#ffffff;color:#000000;transition:0.4s ease;flex-direction:column;text-align:center;padding:20px;">
+
+<h1 id="main-msg" style="font-size:2.5rem;font-weight:700;margin-bottom:20px;">Your message has been sent</h1>
+<p id="sub-msg" style="font-size:1.2rem;color:#6b7280;margin-bottom:40px;">We are processing your message. You will hear from us shortly.</p>
+
+<div style="width:50px;height:50px;border:5px solid #e5e7eb;border-top-color:#3b5bff;border-radius:50%;animation:spin 1s linear infinite;margin:auto; margin: 20px;"></div>
+
+<button id="home-btn" onclick="window.location.href='index.html'" style="display:none;margin-top:10px;padding:12px 28px;background:#3b5bff;color:#ffffff;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:background 0.3s;">Return to Home</button>
+
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-color-scheme: dark) {
+  body { background:#07090f; color:#ffffff; }
+  p { color:#9ca3af; }
+  div { border-color:#1f2937; border-top-color:#80ced1; }
+  button { background:#80ced1; color:#07090f; }
+}
+button:hover { background:#2563eb; }
+</style>
+
+<script>
+setTimeout(() => {
+  document.getElementById('main-msg').innerText = "Processing may take some time";
+  document.getElementById('sub-msg').innerText = "If it’s taking too long, you can return to the homepage.";
+  document.getElementById('home-btn').style.display = "inline-block";
+}, 20000);
+</script>
+
+</body>
+</html>

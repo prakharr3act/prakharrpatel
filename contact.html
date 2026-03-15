@@ -22,9 +22,9 @@
 
 <div class="menu">
 <a href="index.html">Home</a>
-<a  class="active" href="#"> About</a>
+<a  href="#"> About</a>
 <a href="projects.html">Projects</a>
-<a href="contact.html">Contact</a>
+<a  class="active"  href="contact.html">Contact</a>
 <div class="theme-toggle" id="themeToggle"><i class="fa-solid fa-moon"></i></div>
 </div>
 
@@ -42,7 +42,46 @@
 </div>
 
 <main>
+<div class="contact-container">
+  <div class="contact-card">
+    <div class="contact-info">
+      <span class="badge">Contact</span>
+      <h1>Get In touch with Me!</h1>
+      <p>Have questions or ideas? We'd love to hear from you. Reach out anytime and let's connect.</p>
+    </div>
 
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form method="get" action="confirmation.html" >
+        <div class="form-row">
+          <div class="input-group">
+            <label>First Name</label>
+            <input type="text" required>
+          </div>
+          <div class="input-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Optional">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label>Postal Code</label>
+            <input type="text" placeholder="Optional">
+          </div>
+          <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="Optional">
+          </div>
+        </div>
+        <div class="input-group full-width">
+          <label>Message</label>
+          <textarea rows="1" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
 </main>
 
 
@@ -74,7 +113,7 @@
 </footer>
 
 
-<script src="js/script.js">
+<script src="js/contact.js">
 </script>
 
 </body>
