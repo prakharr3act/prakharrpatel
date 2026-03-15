@@ -1,4 +1,4 @@
-# Prakhar Patel | r3act
+# Prakhar Patel 
 
 This repository hosts my **personal website** — a living space where I document my growth, experiments, and systems as I learn and build.
 
