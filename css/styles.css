@@ -510,3 +510,7 @@ section{padding:120px 6vw}
 .gh-cell{width:10px;height:10px}
 .gh-real-stats{flex-direction:column;gap:25px}
 }
+
+a{
+  text-decoration: none;
+}
