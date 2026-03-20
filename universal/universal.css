@@ -1,0 +1,45 @@
+
+
+.pill95122{
+width:64px;
+height:34px;
+border-radius:999px;
+background:var(--card);
+border:1px solid var(--border);
+position:relative;
+cursor:pointer;
+display:flex;
+align-items:center;
+padding:4px;
+transition:.3s ease
+}
+
+.pill95122-circle{
+width:26px;
+height:26px;
+border-radius:50%;
+background:var(--text);
+position:absolute;
+left:4px;
+transition:.3s ease
+}
+
+.pill95122-icon{
+position:absolute;
+font-size:.8rem;
+opacity:.5
+}
+
+.pill95122-icon.sun{right:8px}
+.pill95122-icon.moon{left:8px}
+
+[data-theme="dark"] .pill95122-circle{
+left:34px;
+background:#fff
+}
+
+[data-theme="dark"] .pill95122-icon.sun{opacity:1}
+[data-theme="dark"] .pill95122-icon.moon{opacity:.3}
+
+[data-theme="light"] .pill95122-icon.moon{opacity:1}
+[data-theme="light"] .pill95122-icon.sun{opacity:.3}

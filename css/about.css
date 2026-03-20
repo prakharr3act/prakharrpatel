@@ -19,25 +19,33 @@ html{
 font-size:81.25%;
 }
 }
-
 :root{
 --bg:#ffffff;
---text:#000000;
---muted:#6b7280;
+--text:#0a0a0a;
+--muted:#737373;
 --card:#ffffff;
 --border:#e5e7eb;
---blue:#3b5bff;
---purple:#7c3aed
+
+--blue:#2563eb;
+--purple:#7c3aed;
+--accent:#06b6d4;
+
+--glass:rgba(255,255,255,0.6);
 }
 
 [data-theme="dark"]{
---bg:#07090f;
---text:#ffffff;
---muted:#9ca3af;
---card:#0f1320;
---border:#1f2937
-}
+--bg:#0a0a0a;
+--text:#fafafa;
+--muted:#a3a3a3;
+--card:#111111;
+--border:#1f1f1f;
 
+--blue:#3b82f6;
+--purple:#8b5cf6;
+--accent:#22d3ee;
+
+--glass:rgba(10,10,10,0.6);
+}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 
 body{
